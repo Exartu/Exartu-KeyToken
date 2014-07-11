@@ -23,6 +23,19 @@ KeyToken={
     return token;
 
   },
+  check:function(token, key){
+    if (!token){
+      throw new Meteor.Error(403,'invalid token')
+    }
+    var token=tokens.findOne({
+      key: key,
+      _id: token
+    })
+    if (!token){
+      throw new Meteor.Error(403,'invalid token')
+    }
+    return token;
+  },
 
   createToken: function(key, data){
     if (!key)
