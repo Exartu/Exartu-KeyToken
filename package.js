@@ -1,10 +1,12 @@
 Package.describe({
-  summary: "key tokens"
+  summary: "key tokens",
+  name: 'javiber:keytoken'
 });
 
-Package.on_use(function (api){
+Package.onUse(function (api){
 
+  api.versionsFrom('0.9.0')
 //  api.add_files(['client.js'],'client');
-  api.add_files(['server.js'],'server');
+  api.addFiles(['server.js'],'server');
   api.export('KeyToken');
 });
