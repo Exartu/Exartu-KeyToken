@@ -1,6 +1,8 @@
 Package.describe({
   summary: "key tokens",
-  name: 'javiber:keytoken'
+  name: 'aida:keytoken',
+  version: '0.1.0',
+  git: "https://github.com/Exartu/Exartu-KeyToken.git"
 });
 
 Package.onUse(function (api){
